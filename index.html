@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Portfolio | Code Artisan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-glow"></div>
+
+    <div class="page-loader">
+        <div class="loader-text">INITIALIZING SYSTEM...</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">Alex<span class="neon-text">Neon</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">Expertise</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Works</a></li>
+            <li class="nav-game-link"><a href="#playground">Game</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero Section -->
+            <section class="hero-section" id="hero">
+                <canvas id="hero-particles"></canvas>
+                <div class="grid-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <p class="intro-text">Hello, my name is</p>
+                        <h1 class="name-title">Alex<br><span class="neon-text">Neon</span></h1>
+                        <p class="hero-subtitle">Creative Developer & Digital Architect</p>
+                        <a href="#" class="cv-btn">
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="hero-right">
+                        <div class="hero-graphics">
+                            <div class="circle-outline"></div>
+                            <div class="circle-outline small"></div>
+                            <div id="hero-character">
+                                <img src="poly_man.png" alt="Geometric Poly Character">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What Sets Me Apart -->
+            <section class="differentiator-section" id="about">
+                <div class="diff-content-wrapper">
+                    <div class="diff-left">
+                        <div class="diff-item">
+                            <h2>UI/UX Design</h2>
+                            <p>Crafting intuitive, user-centric interfaces with a focus on modern aesthetics, micro-interactions, and accessibility.</p>
+                        </div>
+                        <div class="diff-item">
+                            <h2>Frontend Development</h2>
+                            <p>Building responsive, highly interactive web applications using HTML, CSS, JavaScript, and modern frameworks.</p>
+                        </div>
+                        <div class="diff-item">
+                            <h2>Backend Architecture</h2>
+                            <p>Designing robust, scalable server-side solutions, secure APIs, and database structures for complex applications.</p>
+                        </div>
+                        <div class="diff-item">
+                            <h2>3D & Web Animations</h2>
+                            <p>Integrating WebGL, Three.js, and GSAP to create immersive, cinematic experiences right in the browser.</p>
+                        </div>
+                    </div>
+                    <div class="diff-right">
+                        <!-- Three.js particle object container -->
+                        <div id="particle-object-container">
+                            <canvas id="bg-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section (Pinned) -->
+            <section class="skills-section" id="skills">
+                <div class="skills-container">
+                    <div class="skills-left">
+                        <h2 class="section-title">Technical<br><span class="neon-text">Arsenal</span></h2>
+                        <p>A curated stack of modern web technologies designed to build the future.</p>
+                    </div>
+                    <div class="skills-right">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Frontend (HTML, CSS, JS)</span>
+                                <span class="skill-percent" data-target="95">0%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Three.js & WebGL</span>
+                                <span class="skill-percent" data-target="85">0%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Backend (Node.js)</span>
+                                <span class="skill-percent" data-target="90">0%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>UI/UX & Motion</span>
+                                <span class="skill-percent" data-target="88">0%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>AI Integration</span>
+                                <span class="skill-percent" data-target="80">0%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Timeline Section -->
+            <section class="education-timeline-section" id="education">
+                <div class="text-center">
+                    <h2 class="section-title">My<br><span class="neon-text">Education</span></h2>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-progress"></div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>High School (10th)</h3>
+                            <p class="institution">St. Xavier's High School</p>
+                            <p>Built a strong foundation in mathematics, logic, and analytical thinking. Participated in state-level coding competitions.</p>
+                            <div class="timeline-meta">
+                                <span class="timeline-score">Score: 92%</span>
+                                <span class="timeline-year">2017 - 2018</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Higher Secondary (12th)</h3>
+                            <p class="institution">Global Science Academy</p>
+                            <p>Specialized in core sciences and advanced computer studies. Developed early passion for algorithmic problem solving.</p>
+                            <div class="timeline-meta">
+                                <span class="timeline-score">Score: 89%</span>
+                                <span class="timeline-year">2018 - 2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Engineering (BE)</h3>
+                            <p class="institution">Tech Institute of Engineering</p>
+                            <p>Computer Science & Engineering (CSE). Mastered data structures, web technologies, and software architecture. Led the college web dev club.</p>
+                            <div class="timeline-meta">
+                                <span class="timeline-score">CGPA: 8.5</span>
+                                <span class="timeline-year">2020 - 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Showcase (Vertical Scroll) -->
+            <section class="projects-section" id="projects">
+                <div class="projects-header text-center">
+                    <h2 class="section-title">Selected<br><span class="neon-text">Works</span></h2>
+                </div>
+                <div class="projects-vertical-stack">
+                    <!-- Card 1 -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Cyber Security App" class="rolling-img">
+                        </div>
+                        <div class="project-info">
+                            <h3>Nexus Protocol</h3>
+                            <p>Next-gen cybersecurity dashboard with real-time threat mapping.</p>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-react"></i> React</span>
+                                <span><i class="fab fa-node-js"></i> Node.js</span>
+                                <span><i class="fas fa-cube"></i> WebGL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&w=800&q=80" alt="AI Interface" class="rolling-img">
+                        </div>
+                        <div class="project-info">
+                            <h3>Aura AI</h3>
+                            <p>Conversational AI interface with generative visual feedback.</p>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-vuejs"></i> Vue</span>
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span><i class="fas fa-magic"></i> GSAP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Fintech App" class="rolling-img">
+                        </div>
+                        <div class="project-info">
+                            <h3>Vault UI</h3>
+                            <p>DeFi portfolio tracker with cinematic data visualizations.</p>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-react"></i> Next.js</span>
+                                <span><i class="fas fa-cubes"></i> Three.js</span>
+                                <span><i class="fab fa-ethereum"></i> Solidity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Gaming Platform" class="rolling-img">
+                        </div>
+                        <div class="project-info">
+                            <h3>Omniverse</h3>
+                            <p>Cloud gaming platform portal with immersive 3D navigation.</p>
+                            <div class="tech-stack">
+                                <span><i class="fas fa-fire"></i> Svelte</span>
+                                <span><i class="fas fa-server"></i> Firebase</span>
+                                <span><i class="fas fa-paint-brush"></i> Canvas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Fun -->
+            <section class="playground-section" id="playground">
+                <h2 class="section-title text-center">Interactive<br><span class="neon-text">Playground</span></h2>
+                <p class="text-center">Move your mouse to drop some items. Let gravity do the rest.</p>
+                <div class="physics-container" id="physics-container">
+                    <!-- Items will be generated by JS -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact">
+                <div class="contact-container">
+                    <div class="contact-left">
+                        <h2 class="section-title">Initiate<br><span class="neon-text">Protocol</span></h2>
+                        <p>Ready to build the future together? Send a transmission.</p>
+                        <div id="contact-lottie"></div>
+                    </div>
+                    <div class="contact-right">
+                        <form class="contact-form">
+                            <div class="input-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Identifier (Name)</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Comms Link (Email)</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" required></textarea>
+                                <label for="message">Transmission (Message)</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>SEND TRANSMISSION</span>
+                                <div class="btn-glow"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <p>&copy; 2026 Alex Neon. System Online.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="back-to-top" id="back-to-top">
+                        <div id="btt-lottie"></div>
+                        <span>UP</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- SplitType -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    
+    <!-- Matter.js for 2D Physics in Education section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
